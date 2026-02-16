@@ -217,7 +217,8 @@ export function App() {
       {showConfetti && <Confetti />}
 
       <h1 className="text-3xl sm:text-4xl font-bold text-white mb-8 text-center drop-shadow-lg">
-        🃏 网络安全抽奖 Demo 🃏
+        研讨物理社
+        🃏新年抽奖 Demo 🃏
       </h1>
 
       <div className="flex gap-3 sm:gap-6 mb-8">
