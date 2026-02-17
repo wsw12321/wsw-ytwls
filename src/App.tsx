@@ -2,11 +2,9 @@ import { useState, useCallback } from 'react';
 import { cn } from './utils/cn';
 
 // ---------------- 配置区域 ----------------
-// 请确保这里的地址是你的 Cloudflare 域名 (不要带 /api/draw 后缀，只写域名根路径)
-// 如果是在本地开发，就是 http://localhost:3000
-const API_BASE = import.meta.env.VITE_API_URL 
-  ? import.meta.env.VITE_API_URL.replace('/api/draw', '') // 自动去掉旧配置可能的后缀
-  : 'http://localhost:3000';
+// 直接置空，使用相对路径。
+// 当你访问 /api/draw 时，Cloudflare Pages 会自动路由到 functions/api/draw.js
+const API_BASE = '';
 
 // ---------------- 类型定义 ----------------
 interface Card {
