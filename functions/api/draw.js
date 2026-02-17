@@ -7,7 +7,7 @@ export async function onRequestPost(context) {
 
   // 抽卡逻辑
   const suits = ['♠', '♥', '♦', '♣'];
-  const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K'];
+  const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', '五水', '六分仪', '🐟'];
   
   const generateCard = () => ({
     suit: suits[Math.floor(Math.random() * suits.length)],
@@ -16,12 +16,6 @@ export async function onRequestPost(context) {
   });
 
   let cards = [generateCard(), generateCard(), generateCard()];
-
-  // 20% 强制中奖
-  if (Math.random() < 0.2) {
-    const winValue = values[Math.floor(Math.random() * values.length)];
-    cards = cards.map(c => ({ ...c, value: winValue }));
-  }
 
   const isWinner = (cards[0].value === cards[1].value) && (cards[1].value === cards[2].value);
 

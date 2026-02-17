@@ -168,7 +168,7 @@ export function App() {
         )}
       </div>
 
-      <h1 className="text-3xl font-bold mb-8">🃏 网络安全抽卡系统 v2.0</h1>
+      <h1 className="text-3xl font-bold mb-8">🃏 研讨物理社新年抽卡系统 v2.0</h1>
 
       {/* 牌桌 */}
       <div className="flex gap-4 mb-8">
